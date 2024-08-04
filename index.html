@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Book-Zone</title>
+    <link rel="stylesheet" href=".//landingpage.css">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="">LIBRARY</a></div>
+        <ul class=navbar1>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SIGN IN</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <a href="#" class="learnmore">LEARN MORE</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    
+    <din class="dropdown_menu open" >
+        <li><a href="#">HOME</a></li>
+            <li><a href="#">SIGN IN</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#" class="learnmore">LEARN MORE</a></li>
+    </din>
+</header>
+
+<main>
+    <section id="main">
+        <h1> WELLCOME!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur <br/>
+            adipisicing elit. Excepturi, fuga?</p>
+    </section>
+</main>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+        
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark':'fa-solid fa-bars'
+
+        
+        }
+    </script>
+</body>
+</html>
